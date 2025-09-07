@@ -1,6 +1,52 @@
-#prezzoBiglietto, #scontoApplicato{
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.main-container{
+    width:1000px;
+    background-color:aqua;
+    margin-top:50px;
+}
+
+.info{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:50px;
+    padding-top:50px;
+    padding-bottom:50px;
+    background-color:lightgreen;
+}
+
+.info *{
+    width:calc((100% - 150px) / 3);
+}
+
+.info div{
+    text-align:center;
+}
+
+.info input{
+    width:100%;
+    margin-top:20px;
+}
+
+.container{
+    display:flex;
+    background-color:yellow;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.container div{
     height:100px;
-    width:100px;
+    width:100%;
     text-align:center;
     border: 1px solid black;
+}
+
+.container p{
+    margin-top:10px;
 }

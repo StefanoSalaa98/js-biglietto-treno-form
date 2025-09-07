@@ -7,17 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <form action="" method="GET">
-        <input id="chilometri" type="number">
-        <input id="anni" type="number">
-        <button id="bottone">INVIO</button>
-    </form>
-    
-    <div id="scontoApplicato"></div>
-    <div id="prezzoBiglietto"></div>
-    
-
+    <div class="main-container">
+        <h3>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
+        <form class="info" action="" method="GET">
+            <div>
+                <label for="nome">NOME E COGNOME</label>
+                <input id="nome" type="text">
+            </div>
+            <div>
+                <label for="nome">KM DA PERCORRERE</label>
+                <input id="chilometri" type="number">
+            </div>
+            <div>
+                <label for="nome">ETA' DELL'UTENTE</label>
+                <input id="anni" type="number">
+            </div>
+            <button id="bottone">INVIO</button>
+        </form>
+        
+        <h3>IL TUO BIGLIETTO</h3>
+        <div class="container">
+            <div> <strong>NOME PASSEGGERO </strong> <p id="nomePasseggero"></p></div> 
+            <div> <strong>CATEGORIA BIGLIETTO </strong> <p id="scontoApplicato"></p></div>
+            <div> <strong>CARROZZA </strong> <p id="carrozzaBiglietto"></p></div>
+            <div> <strong>CODICE BIGLIETTO </strong> <p id="codiceBiglietto"></p></div>
+            <div> <strong>PREZZO BIGLIETTO </strong> <p id="prezzoBiglietto"></p></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

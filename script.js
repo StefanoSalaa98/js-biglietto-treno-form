@@ -1,11 +1,15 @@
 const evento = document.getElementById("bottone");
 const prezzoOut = document.getElementById("prezzoBiglietto");
 const scontoOut = document.getElementById("scontoApplicato");
+const utenteOut = document.getElementById("nomePasseggero");
+const carrozzaOut = document.getElementById("carrozzaBiglietto");
+const codiceOut = document.getElementById("codiceBiglietto");
 
 evento.addEventListener("click", function(e){
 
     const kmUtente = document.getElementById("chilometri");
     const anniUtente = document.getElementById("anni");
+    const nomeUtente = document.getElementById("nome");
     
     e.preventDefault();
     
@@ -35,8 +39,32 @@ evento.addEventListener("click", function(e){
     console.log(kmUtente.value, prezzo);
     console.log("ciao");
 
-    //Restituisci l'output del prezzo e dello sconto
+    //Restituisci l'output dei dati inseriti
 
-    scontoOut.textContent = "Ti è stato applicato uno sconto del: " +sconto;
-    prezzoOut.textContent = "Il prezzo del tuo biglietto è di " +prezzo+ "€";
+    utenteOut.innerHTML = "<p>" +nomeUtente.value+ "<\p>";
+
+    const numCarrozza = Math.floor(Math.random()*10 + 1);
+    carrozzaOut.innerHTML ="<p>" +numCarrozza+ "<\p>";
+    
+    const codice = Math.floor(Math.random()*899999 + 100000);
+    codiceOut.innerHTML ="<p>" +codice+ "<\p>";
+
+    let tipoBiglietto;
+    if(sconto === "0%"){
+        tipoBiglietto = "BIGLIETTO STANDARD";
+    }
+    else if(sconto === "20%"){
+        tipoBiglietto = "BIGLIETTO GIOVANI";
+    }
+    else{
+        tipoBiglietto = "BIGLIETTO ANZIANI";
+    }
+    scontoOut.innerHTML = "<p>" +tipoBiglietto+ "<\p>";
+    prezzoOut.innerHTML = "<p>" +prezzo+ "€<\p>";
+
+    //Ripulisci elementi form
+
+    nomeUtente.value="";
+    kmUtente.value="";
+    anniUtente.value="";
 });
