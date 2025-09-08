@@ -1,4 +1,5 @@
 const evento = document.getElementById("bottone");
+const cancella = document.getElementById("annulla");
 const prezzoOut = document.getElementById("prezzoBiglietto");
 const scontoOut = document.getElementById("scontoApplicato");
 const utenteOut = document.getElementById("nomePasseggero");
@@ -67,4 +68,14 @@ evento.addEventListener("click", function(e){
     nomeUtente.value="";
     kmUtente.value="";
     anniUtente.value="";
+});
+
+//Ripulisci il biglietto
+
+cancella.addEventListener("click",function(){
+    prezzoOut.innerHTML="";
+    scontoOut.innerHTML="";
+    utenteOut.innerHTML="";
+    carrozzaOut.innerHTML="";
+    codiceOut.innerHTML="";
 });
